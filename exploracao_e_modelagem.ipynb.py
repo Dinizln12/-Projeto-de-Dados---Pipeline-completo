@@ -42,7 +42,7 @@ try:
     conn = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='Lu281011*',
+        password='L11*',
         database='service_desk'
     )
 
@@ -109,3 +109,4 @@ print(f"MTTR: {mttr_horas:.2f} horas")
 
 desempenho_tecnico = df.groupby('tecnico')['tempo_resolucao'].mean().sort_values()
 desempenho_grupo = df.groupby('grupo_tecnico')['sla_cumprido'].mean().sort_values(ascending=False)
+
