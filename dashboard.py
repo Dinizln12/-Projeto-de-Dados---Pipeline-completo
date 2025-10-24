@@ -7,7 +7,7 @@ import plotly.express as px
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Lu281011*",
+    password="***",
     database="service_desk"
 )
 
@@ -57,4 +57,5 @@ if 'data_abertura' in df.columns:
     chamados_por_dia = df.groupby(df['data_abertura'].dt.date).size().reset_index(name='Chamados')
     fig_tempo = px.line(chamados_por_dia, x='data_abertura', y='Chamados', title='Chamados ao longo do tempo')
     st.plotly_chart(fig_tempo, use_container_width=True)
+
 
